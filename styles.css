@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+.container{
+    min-height: 100vh;
+    background: linear-gradient(135deg,#fbdce2, #e3d4f3);
+    background-size: cover;
+    padding: 10px; 
+}
+
+.todo-list{
+  width: 100%;
+  max-width: 540px;
+  background: white;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;  
+}
+
+.todo-icon-img {
+  width: 40px;
+  height: auto;
+  margin-left: 10px;
+}
+
+.todo-list h2{
+    color: #6b5b95;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input input {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  width: 250px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.input button {
+  padding: 10px 20px;
+  background-color: #6b5b95;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.input button:hover {
+  background-color: #5a4a80;
+}
+
+ul li{
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 29px;
+  border-radius: 50%;
+  background-image: url(./unchecked\ 1.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+ul li.mark{
+   color: gray;
+   text-decoration: line-through;
+}
+
+ul li.mark::before{
+   background-image: url(./checked.png);
+
+}
+
+ul li span{
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #6b5b95;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover{
+   background-color: #edeef0;
+}
